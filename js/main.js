@@ -17,6 +17,8 @@ let kennyObj;
 
 let volcanoArr = [];
 let fireballs = [];
+let heartArr = [];
+let kennyArr = [];
 
 let gameIntervalId = null;
 
@@ -31,34 +33,58 @@ function startGame() {
 
   //.4 start the game loop(interval)
   setInterval(gameInterval, Math.round(1000 / 60));
-  setInterval(spawnKenny, 10000);
+  setInterval(spawnKenny, 7000);
   //5. we start any other interval that we may need
   setTimeout(spawnVolcano, 2000);
+  spawnHeart();
 }
 
 function gameInterval() {
-  for (const b of fireballs) {
+  for (let i = fireballs.length - 1; i >= 0; i--) {
+    const b = fireballs[i];
     if (checkCollision(mechaObj, b)) {
-      gameOver();
-      break;
+      const lostHeart = heartArr.pop();
+      if (lostHeart) {
+        lostHeart.node.remove();
+      }
+      fireballs.splice(i, 1);
+      b.node.remove();
     }
   }
-
   eatKenny();
+
+  if (heartArr.length === 0) {
+    gameOver();
+  }
 }
 
 function eatKenny() {
   if (kennyObj === undefined) {
     return;
   }
-  if (checkCollision(mechaObj, kennyObj)) {
-    mechaObj.growing();
-    kennyObj = undefined;
+  for (let i = kennyArr.length - 1; i >= 0; i--) {
+    const k = kennyArr[i];
+    if (checkCollision(mechaObj, k)) {
+      mechaObj.growing();
+      k.node.src = "./images/deadkenny.png";
+      const removeKenny = kennyArr.splice(k, 1);
+      k = undefined;
+      let;
+    }
   }
 }
 
 function spawnKenny() {
   kennyObj = new Kenny();
+  kennyArr.push(kennyObj);
+}
+
+function spawnHeart() {
+  let XPos = 650;
+  for (let i = 0; i < 3; i++) {
+    let heart = new Heart(XPos + i * 120);
+    heartArr.push(heart);
+  }
 }
 
 function spawnVolcano() {
