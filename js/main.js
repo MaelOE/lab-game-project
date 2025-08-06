@@ -43,6 +43,18 @@ function gameInterval() {
       break;
     }
   }
+
+  eatKenny();
+}
+
+function eatKenny() {
+  if (kennyObj === undefined) {
+    return;
+  }
+  if (checkCollision(mechaObj, kennyObj)) {
+    mechaObj.growing();
+    kennyObj = undefined;
+  }
 }
 
 function spawnKenny() {

@@ -18,6 +18,7 @@ class Mecha {
     this.node.style.left = `${this.x}px`;
 
     this.jumpSpeed = 100;
+    this.bigger = 30;
   }
 
   up() {
@@ -54,5 +55,12 @@ class Mecha {
 
     this.x -= this.jumpSpeed;
     this.node.style.left = `${this.x}px`;
+  }
+
+  growing() {
+    this.h += this.bigger;
+    this.w += this.bigger;
+    this.node.style.width = `${this.w}px`;
+    this.node.style.height = `${this.h}px`;
   }
 }
