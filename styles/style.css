@@ -43,3 +43,20 @@ body {
   background-image: url("../images/bg.png");
   background-size: cover;
 }
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: xxx-large;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.top-center {
+  position: absolute;
+  top: 8px;
+  text-align: center;
+  font-size: xxx-large;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
