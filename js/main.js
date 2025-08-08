@@ -25,26 +25,33 @@ let count = 0;
 let loopTimeOut = null;
 
 const starterSound = new Audio("sounds/starter.mp3");
+starterSound.volume = 0.7;
 const loopSound = new Audio("sounds/loop.mp3");
+loopSound.volume = 0.7;
 const killKenny = new Audio("sounds/kenny.mp3");
+loopSound.volume = 0.7;
 const eatingKenny = new Audio("sounds/eating-kenny.wav");
+eatingKenny.volume = 0.7;
 const voice = new Audio("sounds/voice.wav");
+voice.volume = 0.7;
 const life = new Audio("sounds/life.wav");
+life.volume = 0.7;
 const endscreen = new Audio("sounds/end.wav");
+endscreen.volume = 0.7;
 
 //* GLOBAL GAME FUNCTIONS
 function startGame() {
-  //1. hide the start game screen
+  //1. hiding the start game screen
   startScreenNode.style.display = "none";
-  //2. show the game screen
+  //2. showing the game screen
   gameScreenNode.style.display = "flex";
-  //3. add an inital element to the game
+  //3. adding main character to the game
   mechaObj = new Mecha();
 
-  //.4 start the game loop(interval)
+  //.4 starting the game loop(interval)
   const myInterval = setInterval(gameInterval, Math.round(1000 / 60));
   const kennyInterval = setInterval(spawnKenny, 7000);
-  //5. we start any other interval that we may need
+  //5. Starting any other interval
   setTimeout(spawnVolcano, 2000);
   spawnHeart();
   loopSound.loop = true;
