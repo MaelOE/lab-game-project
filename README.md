@@ -84,7 +84,7 @@ Meanwhile, clueless Kennys wander the arena—eat them to grow in size _and_ rac
 
 ## 📎 Extra Links
 
-| Resource                | Link                                        |
-| ----------------------- | ------------------------------------------- |
-| **Presentation Slides** | _( URL)_                                    |
-| **Live Demo / Deploy**  | https://maeloe.github.io/lab-game-project/) |
+| Resource                | Link                                               |
+| ----------------------- | -------------------------------------------------- |
+| **Presentation Slides** | _(https://gamma.app/docs/ON-FIRE-7gwpe3fox60aq6h)_ |
+| **Live Demo / Deploy**  | https://maeloe.github.io/lab-game-project/)        |
