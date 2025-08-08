@@ -76,9 +76,7 @@ Meanwhile, clueless Kennys wander the arena—eat them to grow in size _and_ rac
 │ # game loop, collision checks, state control
 ├── fireball.js # class Fireball { speed; automaticMovement() }
 ├── volcano.js # class Volcano { throwBall() }
-├── mecha.js # class Mecha {
-│ up(); down(); left(); right(); growing();
-│ }
+├── mecha.js # class Mecha { up(); down(); left(); right(); growing(); }
 ├── kenny.js # class Kenny { random spawn coords }
 └── heart.js # class Heart { static life icons }
 
