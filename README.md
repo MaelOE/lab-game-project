@@ -67,18 +67,20 @@ Meanwhile, clueless Kennys wander the arena—eat them to grow in size _and_ rac
 
 ## Project Structure
 
+```text
 .
-├── index.html # Game markup & state containers
+├── index.html          # Game markup & state containers
 ├── styles/
-│ └── style.css # Visual styles
+│   └── style.css       # Visual styles
 └── js/
-├── main.js # Entry point, DOM cache, event listeners,
-│ # game loop, collision checks, state control
-├── fireball.js # class Fireball { speed; automaticMovement() }
-├── volcano.js # class Volcano { throwBall() }
-├── mecha.js # class Mecha { up(); down(); left(); right(); growing(); }
-├── kenny.js # class Kenny { random spawn coords }
-└── heart.js # class Heart { static life icons }
+    ├── main.js         # Entry point, DOM cache, event listeners,
+    │                   # game loop, collision checks, state control
+    ├── fireball.js     # class Fireball { speed; automaticMovement() }
+    ├── volcano.js      # class Volcano { throwBall() }
+    ├── mecha.js        # class Mecha { up(); down(); left(); right(); growing(); }
+    ├── kenny.js        # class Kenny { random spawn coords }
+    └── heart.js        # class Heart { static life icons }
+```
 
 ## 📎 Extra Links
 
